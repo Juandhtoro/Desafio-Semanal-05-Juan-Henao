@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+
+body {
+    background-image: url(../img/future.jpg);
+}
+
+.form {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 75%;
+    justify-content: center;
+}
+
+
+#title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px #4741d7;
+    background-color: black;
+    opacity: .8;
+}
+
+legend {
+    font-size: 12px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #4741d7;
+}
+
+.boxone {
+    font-family: 'Orbitron', sans-serif;
+    display: grid;
+    justify-content: center;
+    background-color: none;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.box,
+.checkbox {
+    background: white;
+    opacity: 0.9;
+    color: #4741d7;
+    border: 2px solid #4741d7;
+    padding: 16px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.box:hover,
+.checkbox:hover {
+    color: white;
+}
+
+.box::after,
+.checkbox::after {
+    content: "";
+    background: #4741d7;
+    opacity: 1;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+    transition: all 0.3s ease;
+}
+
+.box:hover::after,
+.checkbox:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1) rotate(0deg);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.radio {
+    font-family: 'Orbitron', sans-serif;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.radione {
+    margin: 0 auto;
+}
+
+.text {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input {
+    text-align: right;
+    height: 20px;
+}
+
+.cont-pointuno,
+.cont-point {
+    margin: 0 auto;
+    width: 50%;
+    height: 5px;
+    background-image: radial-gradient(#4741d7 100%, transparent 0);
+    opacity: .5;
+}
+
+.cont-pointuno {
+    margin: 10px auto;
+    background-image: radial-gradient(white 20%, transparent 0);
+    background-size: 10px;
+}
+
+.text1,
+.check {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin-top: 10px;
+    font-size: 12px;
+    box-shadow: #4741d7;
+    border: #4741d7 1px solid;
+    background-color: black;
+    opacity: .9;
+    box-shadow: 5px 5px 30px #4741d7;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.check {
+    margin: 5px auto;
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    border: none;
+}
+
+.chkbx {
+    margin-top: 10px;
+}
+
+.text2 {
+    place-self: end center;
+    grid-row: 2;
+}
+
+.chkbx:nth-of-type(2) {
+    margin-top: 10px;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.chkbx:nth-of-type(1) {
+    margin-top: 10px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.btn {
+    padding: 10px;
+    margin: 20px;
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.7s;
+    border: 2px solid #4741d7;
+    color: #4741d7;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #4741d7;
+    border: 2px solid white;
+    color: white;
+}
+
+.btnuno {
+    padding: 50px;
+}
+
+.box:focus-within,
+.box:focus-within .box,
+.checkbox:focus-within {
+    background-color: #4741d7;
+    box-shadow: 5px 5px 40px;
+    color: white;
+    opacity: .9;
+}
+
+.box:focus-within legend,
+.checkbox:focus-within legend {
+    background-color: white;
+    color: #4741d7;
+    box-shadow: 5px 5px 5px black;
+}
+
+input:focus,
+textarea:focus {
+    background-color: white;
+    color: black;
+}

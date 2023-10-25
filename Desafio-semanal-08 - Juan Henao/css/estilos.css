@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+body {
+    background-color: rgba(31, 32, 35, 255);
+}
+
+.form {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 60%;
+    justify-content: center;
+}
+
+
+#title {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    border-color: rgba(77, 109, 99, 255) rgba(31, 32, 35, 255);
+    border-width: 15px;
+    border-style: solid;
+}
+
+b {
+    font-size: 15px;
+}
+
+legend {
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(77, 109, 99, 255);
+    color: aliceblue;
+}
+
+.box,
+.boxone {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    margin: 5px;
+    grid-template-columns: 90%;
+    justify-content: center;
+    background-color: rgba(214, 226, 222, 255);
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.radio,
+.button {
+    display: grid;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button {
+    display: flex;
+}
+
+.radione {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.text {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input {
+    text-align: right;
+    height: 20px;
+}
+
+.cont-point {
+    margin: 0 auto;
+    width: 44%;
+    height: 20px;
+    background-image: radial-gradient(rgb(166, 196, 188) 31%, transparent 0);
+    background-size: 21px;
+}
+
+.text1,
+.check {
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.checkbox {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(214, 226, 222, 255);
+    font-size: 12px;
+}
+
+.chkbx {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    padding: 10px;
+    margin: 20px;
+    color: rgba(214, 226, 222, 255);
+    background-color: rgba(43, 61, 55, 255);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+.box:focus-within,
+.box:focus-within .box,
+.box:focus-within .boxone,
+.checkbox:focus-within {
+    background-color: rgb(166, 196, 188);
+}
+
+.box:focus-within legend,
+.checkbox:focus-within legend {
+    background-color: rgba(43, 61, 55, 255);
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgba(43, 61, 55, 255);
+    color: aliceblue;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn:hover {
+    background-color: rgba(214, 226, 222, 255);
+    color: rgba(43, 61, 55, 255);
+}

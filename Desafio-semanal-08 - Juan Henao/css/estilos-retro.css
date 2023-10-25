@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz@1,12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+body {
+    background-image: url(../img/vintage.jpg);
+}
+
+.form {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 100%;
+    justify-content: center;
+}
+
+
+#title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+}
+
+b {
+    font-size: 15px;
+}
+
+legend {
+    font-size: 11px;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #876245;
+    color: aliceblue;
+}
+
+.box,
+.boxone {
+    font-family: 'Texturina', serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    background-color: none;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+
+.box {
+    background-color: #D9CCB0;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btnuno {
+    padding: 50px;
+}
+
+.radio {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.radione {
+    margin: 0 auto;
+}
+
+.text {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.input {
+    text-align: right;
+    height: 20px;
+}
+
+.cont-point {
+    margin: 0 auto;
+    width: 30%;
+    height: 10px;
+    background-image: radial-gradient(#876245 100%, transparent 0);
+}
+
+.cont-pointuno {
+    margin: 10px auto;
+    width: 10%;
+    height: 10px;
+    background-image: radial-gradient(#876245 100%, transparent 0);
+}
+
+.text1,
+.check {
+    font-family: 'Dancing Script', sans-serif;
+    color: black;
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.text2 {
+    place-self: end center;
+    grid-row: 2;
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-family: 'Texturina', serif;
+    background-color: #D9CCB0;
+    font-size: 14px;
+    border: none;
+}
+
+.chkbx {
+    margin-top: 10px;
+}
+
+.chkbx:nth-of-type(2) {
+    margin-top: 10px;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.chkbx:nth-of-type(1) {
+    margin-top: 10px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.btn {
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    background-color: #876245;
+    font-family: 'Dancing Script', cursive;
+    font-size: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.7s;
+}
+
+.box:focus-within,
+.box:focus-within .box,
+.checkbox:focus-within {
+    background-color: #CDBB96;
+    box-shadow: 5px 5px 40px;
+    opacity: .9;
+}
+
+.box:focus-within legend,
+.checkbox:focus-within legend {
+    background-color: #9C7450;
+    box-shadow: 5px 5px 5px black;
+}
+
+input:focus,
+textarea:focus {
+    background-color: #D9CCB0;
+    color: black;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #D9CCB0;
+    box-shadow: 5px 5px 40px;
+    color: black;
+}
