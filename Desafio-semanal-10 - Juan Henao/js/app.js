@@ -7,7 +7,7 @@ const calculate = (n1, operator, n2) => {
     let result = ''
 
     if (operator === 'add') {
-        result = BigInt(n1) + BigInt(n2)
+        result = parseFloat(n1) + parseFloat(n2)
     } else if (operator === 'subtract') {
         result = parseFloat(n1) - parseFloat(n2)
     } else if (operator === 'multiply') {
@@ -62,7 +62,8 @@ function numberButtonClick(e) {
     } else if (action === 'delete' && displayedNumTwo) {
         inputNumberTwo.textContent = inputNumberTwo.textContent.slice(0, -1);
     }
-    if (action === 'clear' || inputNumber.textContent === 'NaN') {
+
+    if (action === 'clear') {
         inputNumber.textContent = '';
         inputNumberTwo.textContent = '';
         calculator.dataset.previousKeyType = 'clear'
@@ -71,9 +72,23 @@ function numberButtonClick(e) {
     if (action === 'calculate') {
         const firstValue = calculator.dataset.firstValue;
         const operator = calculator.dataset.operator;
+        const operatorTwo = calculator.dataset.previousKeyType;
         const secondValue = displayedNumTwo;
         inputNumberTwo.textContent = '';
-        inputNumber.textContent = calculate(firstValue, operator, secondValue)
+        inputNumber.textContent = calculate(firstValue, operator, secondValue);
+
+        Array.from(button.parentNode.children)
+            .forEach(k => k.classList.remove('button--numbers--active'));
     }
 
+    if (isNaN(inputNumber.textContent) || inputNumber.textContent === "Infinity") {
+        inputNumber.textContent = '';
+        inputNumberTwo.textContent = '';
+        calculator.dataset.previousKeyType = 'clear'
+    }
+
+    if (inputNumber.textContent.length > 9 || inputNumberTwo.textContent.length) {
+        inputNumber.textContent = inputNumber.textContent.slice(0, 9);
+        inputNumberTwo.textContent = inputNumberTwo.textContent.slice(0, 9);
+    }
 }
